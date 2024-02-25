@@ -1,11 +1,6 @@
 ###
-### usage: time python trimmer.py >> file.txt 2>&1
-### test cmd >>file.txt 2>&1
+### usage: time python trimmer.py &> messages.trimmer.txt
 ###
-###
-
-# test cmd >>file.txt 2>&1
-# profile time using 4 and 8 threads
 
 import os, datetime, sys, re
 
@@ -51,10 +46,11 @@ def trimmomatic_caller(sample):
 # 0. user defined variablessample
 raw_fastq_dir = '/Users/adrian/research/akureyri/data/raw/'
 clean_fastq_dir = '/Users/adrian/research/akureyri/data/clean_fastq/'
-clean_fastq_dir = '/Users/adrian/scratch/'
 trimmomatic_path = '/Users/adrian/software/Trimmomatic-0.39/'
 adapter_file = trimmomatic_path + 'adapters/TruSeq3-PE-2.fa'
 number_threads = 4 # not sure if there is an impact on 4 vs 8. Need to profile.
+# @ 8 threads, python trimmer.py &> messages.trimmer.txt  46278.63s user 737.45s system 301% cpu 4:20:09.23 total. it took four hours and a quarter.
+# @ 4 threads, python trimmer.py &> messages.trimmer.txt  50630.44s user 797.15s system 302% cpu 4:43:45.32 total. four hours and forty minutes
 
 # 1. recover samples
 all_files = os.listdir(raw_fastq_dir)

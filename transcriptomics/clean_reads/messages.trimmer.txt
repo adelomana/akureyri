@@ -1,0 +1,285 @@
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT' 
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 42040999 Both Surviving: 39497304 (93.95%) Forward Only Surviving: 2156610 (5.13%) Reverse Only Surviving: 310564 (0.74%) Dropped: 76521 (0.18%)
+TrimmomaticPE: Completed successfully
+
+real	23m20.600s
+user	66m57.190s
+sys	1m8.910s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 63397764 Both Surviving: 55101086 (86.91%) Forward Only Surviving: 8199307 (12.93%) Reverse Only Surviving: 69599 (0.11%) Dropped: 27772 (0.04%)
+TrimmomaticPE: Completed successfully
+
+real	26m41.547s
+user	87m48.803s
+sys	1m29.197s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 47467490 Both Surviving: 45039960 (94.89%) Forward Only Surviving: 1958590 (4.13%) Reverse Only Surviving: 370771 (0.78%) Dropped: 98169 (0.21%)
+TrimmomaticPE: Completed successfully
+
+real	25m28.700s
+user	72m5.711s
+sys	1m8.494s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 66435774 Both Surviving: 55538403 (83.60%) Forward Only Surviving: 10794408 (16.25%) Reverse Only Surviving: 57922 (0.09%) Dropped: 45041 (0.07%)
+TrimmomaticPE: Completed successfully
+
+real	24m22.489s
+user	79m16.115s
+sys	1m13.691s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 2792929 Both Surviving: 2666877 (95.49%) Forward Only Surviving: 106818 (3.82%) Reverse Only Surviving: 14205 (0.51%) Dropped: 5029 (0.18%)
+TrimmomaticPE: Completed successfully
+
+real	1m16.958s
+user	3m44.103s
+sys	0m3.320s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 39160668 Both Surviving: 36927088 (94.30%) Forward Only Surviving: 1854057 (4.73%) Reverse Only Surviving: 296958 (0.76%) Dropped: 82565 (0.21%)
+TrimmomaticPE: Completed successfully
+
+real	20m30.672s
+user	57m29.221s
+sys	0m52.459s
+['RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2', 'RNA_test_1_EKRN240003675-1A_222T7HLT4_L6', 'RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2', 'RNA_test_2_EKRN240003676-1A_222HMFLT4_L1', 'RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2', 'RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2', 'RNA_test_3_EKRN240003677-1A_222HMFLT4_L1', 'RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2', 'RNA_test_4_EKRN240003678-1A_222T7HLT4_L5', 'RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2', 'RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2', 'RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3', 'RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2', 'RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2', 'RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2']
+
+2024-02-24 23:22:03 	 about to clean RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2/RNA_test_1_EKRN230071387-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-24 23:45:24 	 about to clean RNA_test_1_EKRN240003675-1A_222T7HLT4_L6
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6/RNA_test_1_EKRN240003675-1A_222T7HLT4_L6_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 00:12:05 	 about to clean RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2/RNA_test_2_EKRN230071388-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 00:37:34 	 about to clean RNA_test_2_EKRN240003676-1A_222HMFLT4_L1
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1/RNA_test_2_EKRN240003676-1A_222HMFLT4_L1_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 01:01:57 	 about to clean RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2/RNA_test_3_EKRN230071389-1A_H2W7MDSXC_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 01:03:14 	 about to clean RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2/RNA_test_3_EKRN230071389-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 01:23:44 	 about to clean RNA_test_3_EKRN240003677-1A_222HMFLT4_L1
+
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 64988695 Both Surviving: 53143054 (81.77%) Forward Only Surviving: 11737776 (18.06%) Reverse Only Surviving: 54420 (0.08%) Dropped: 53445 (0.08%)
+TrimmomaticPE: Completed successfully
+
+real	23m26.614s
+user	76m53.211s
+sys	1m12.799s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 41915487 Both Surviving: 39451990 (94.12%) Forward Only Surviving: 2031508 (4.85%) Reverse Only Surviving: 342106 (0.82%) Dropped: 89883 (0.21%)
+TrimmomaticPE: Completed successfully
+
+real	21m45.401s
+user	61m7.792s
+sys	0m54.833s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 54988925 Both Surviving: 47059079 (85.58%) Forward Only Surviving: 7823738 (14.23%) Reverse Only Surviving: 70734 (0.13%) Dropped: 35374 (0.06%)
+TrimmomaticPE: Completed successfully
+
+real	21m1.033s
+user	67m26.905s
+sys	1m2.638s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 2867961 Both Surviving: 2734488 (95.35%) Forward Only Surviving: 110874 (3.87%) Reverse Only Surviving: 16978 (0.59%) Dropped: 5621 (0.20%)
+TrimmomaticPE: Completed successfully
+
+real	1m18.889s
+user	3m50.768s
+sys	0m3.346s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 39075074 Both Surviving: 36842219 (94.29%) Forward Only Surviving: 1805375 (4.62%) Reverse Only Surviving: 340826 (0.87%) Dropped: 86654 (0.22%)
+TrimmomaticPE: Completed successfully
+
+real	20m20.233s
+user	57m20.013s
+sys	0m53.703s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 14303185 Both Surviving: 13619653 (95.22%) Forward Only Surviving: 627089 (4.38%) Reverse Only Surviving: 44728 (0.31%) Dropped: 11715 (0.08%)
+TrimmomaticPE: Completed successfully
+
+real	6m44.551s
+user	19m29.658s
+sys	0m17.497s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 32003423 Both Surviving: 30081122 (93.99%) Forward Only Surviving: 1591246 (4.97%) Reverse Only Surviving: 262551 (0.82%) Dropped: 68504 (0.21%)
+TrimmomaticPE: Completed successfully
+
+real	16m37.021s
+user	46m48.612s
+sys	0m43.197s
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1/RNA_test_3_EKRN240003677-1A_222HMFLT4_L1_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 01:47:11 	 about to clean RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2/RNA_test_4_EKRN230071390-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 02:08:56 	 about to clean RNA_test_4_EKRN240003678-1A_222T7HLT4_L5
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5/RNA_test_4_EKRN240003678-1A_222T7HLT4_L5_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 02:29:57 	 about to clean RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2/RNA_test_5_EKRN230071391-1A_H2W7MDSXC_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 02:31:16 	 about to clean RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2/RNA_test_5_EKRN230071391-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 02:51:36 	 about to clean RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3/RNA_test_6_EKRN230071392-1A_H2WC5DSXC_L3_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 02:58:21 	 about to clean RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2/RNA_test_6_EKRN230071392-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 03:14:58 	 about to clean RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2
+
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 51599591 Both Surviving: 48712168 (94.40%) Forward Only Surviving: 2375015 (4.60%) Reverse Only Surviving: 403405 (0.78%) Dropped: 109003 (0.21%)
+TrimmomaticPE: Completed successfully
+
+real	27m1.747s
+user	75m50.606s
+sys	1m9.794s
+TrimmomaticPE: Started with arguments:
+ -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Using PrefixPair: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT' and 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
+Using Long Clipping Sequence: 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+Using Long Clipping Sequence: 'GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT'
+Using Long Clipping Sequence: 'TACACTCTTTCCCTACACGACGCTCTTCCGATCT'
+ILLUMINACLIP: Using 1 prefix pairs, 4 forward/reverse sequences, 0 forward only sequences, 0 reverse only sequences
+Input Read Pairs: 46418661 Both Surviving: 43551843 (93.82%) Forward Only Surviving: 2414415 (5.20%) Reverse Only Surviving: 369164 (0.80%) Dropped: 83239 (0.18%)
+TrimmomaticPE: Completed successfully
+
+real	23m48.713s
+user	67m41.692s
+sys	1m3.211s
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2/RNA_test_7_EKRN230071393-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+
+2024-02-25 03:42:00 	 about to clean RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2
+
+time java -jar /Users/adrian/software/Trimmomatic-0.39/trimmomatic-0.39.jar PE -threads 4 -phred33 /Users/adrian/research/akureyri/data/raw/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_1.fq.gz /Users/adrian/research/akureyri/data/raw/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_2.fq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_R1_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_R1_garbage.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_R2_clean.fastq.gz /Users/adrian/research/akureyri/data/clean_fastq/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2/RNA_test_8_EKRN230071394-1A_HFTFWDSX7_L2_R2_garbage.fastq.gz ILLUMINACLIP:/Users/adrian/software/Trimmomatic-0.39/adapters/TruSeq3-PE-2.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
