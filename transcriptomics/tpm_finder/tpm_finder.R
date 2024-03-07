@@ -58,8 +58,8 @@ cultures = c('2D', '2D', '3D', '3D', '2D', '2D',
 
 metadata = data.frame(sample)
 metadata$label = labels
-metadata$time = time
-metadata$culture = culture
+metadata$time = times
+metadata$culture = cultures
 metadata$path = paths
 metadata <- metadata[order(metadata$sample), ]
 View(metadata)
