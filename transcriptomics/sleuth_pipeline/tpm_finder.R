@@ -12,6 +12,8 @@
 # installing some added packages needed for biomart to function
 # install("BiocFileCache", force=TRUE)
 
+rm(list = ls())
+
 library(biomaRt)
 library(sleuth)
 library(crayon) # so the messages are blue
@@ -23,7 +25,7 @@ library(tictoc)
 setwd("~/scratch/")
 
 kallisto_dir = "/Users/adrian/research/akureyri/results/kallisto.100"
-results_dir = '/Users/adrian/research/akureyri/results/tpm'
+results_dir = '/Users/adrian/research/akureyri/results/sleuth_pipeline'
 
 #
 # 1. generate gene to transcript mapping
@@ -62,7 +64,6 @@ metadata$time = times
 metadata$culture = cultures
 metadata$path = paths
 metadata <- metadata[order(metadata$sample), ]
-View(metadata)
 
 #
 # 3. create a sleuth object
@@ -83,9 +84,11 @@ toc()
 # theads option does not impact elapsed time
 
 #
-# 4. store TPMs
+# 4. store estimated counts per gene. Sleuth recomends "scaled_reads_per_base"
 #
 cat(blue('storing'), fill=TRUE)
-tpm_table = sleuth_to_matrix(so, 'obs_norm', 'tpm')
-View(tpm_table)
-write.csv(tpm_table, file.path(results_dir, 'sleuth_TPM_pergene.csv'))
+tpm_table = sleuth_to_matrix(so, 'obs_norm', 'scaled_reads_per_base')
+write.table(tpm_table, 
+          file.path(results_dir, 'sleuth_scaled_reads_bygene.csv'),
+          quote = FALSE,
+          sep = '\t')
