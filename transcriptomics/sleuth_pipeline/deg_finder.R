@@ -2,6 +2,7 @@ rm(list = ls())
 
 library(biomaRt)
 library(sleuth)
+library(ggplot2)
 
 #
 # 0. user-defined variables
@@ -75,7 +76,8 @@ sleuth_table = sleuth_results(so,
                                pval_aggregate = TRUE)
 sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
 dim(sleuth_significant)
-plot_pca(so, color_by = 'time', title = 'effect time for 2D')
+plot_pca(so, color_by = 'time') + ggtitle('effect time for 2D')
+ggsave(file.path(results_dir, 'effect_time_2D.png'))
 write.table(sleuth_significant, 
             file = paste(results_dir, '/effect_time_for_2D.tsv', sep=''), 
             sep = '\t',
@@ -104,7 +106,8 @@ sleuth_table = sleuth_results(so,
                               pval_aggregate = TRUE)
 sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
 dim(sleuth_significant)
-plot_pca(so, color_by = 'time',  title = 'effect time for 3D')
+plot_pca(so, color_by = 'time') + ggtitle('effect time for 3D')
+ggsave(file.path(results_dir, 'effect_time_3D.png'))
 write.table(sleuth_significant, 
             file = paste(results_dir, '/effect_time_for_3D.tsv', sep=''), 
             sep = '\t',
@@ -133,7 +136,8 @@ sleuth_table = sleuth_results(so,
                               pval_aggregate = TRUE)
 sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
 dim(sleuth_significant)
-plot_pca(so, color_by = 'culture',  title = 'effect culture at 2 days')
+plot_pca(so, color_by = 'culture') + ggtitle('effect culture at 2 days')
+ggsave(file.path(results_dir, 'effect_culture_2days.png'))
 write.table(sleuth_significant, 
             file = paste(results_dir, '/effect_culture_at_2days.tsv', sep=''), 
             sep = '\t',
@@ -162,7 +166,8 @@ sleuth_table = sleuth_results(so,
                               pval_aggregate = TRUE)
 sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
 dim(sleuth_significant)
-plot_pca(so, color_by = 'culture', title = 'effect culture at 14 days')
+plot_pca(so, color_by = 'culture') + ggtitle('effect culture at 14 days')
+ggsave(file.path(results_dir, 'effect_culture_14days.png'))
 write.table(sleuth_significant, 
             file = paste(results_dir, '/effect_culture_at_14days.tsv', sep=''), 
             sep = '\t',
@@ -190,6 +195,8 @@ sleuth_table = sleuth_results(so,
                               pval_aggregate = TRUE)
 sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
 dim(sleuth_significant)
+plot_pca(so, color_by = 'culture') + ggtitle('interaction')
+ggsave(file.path(results_dir, 'interaction.png'))
 write.table(sleuth_significant, 
             file = paste(results_dir, '/interaction.tsv', sep=''), 
             sep = '\t',

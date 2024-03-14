@@ -1,0 +1,460 @@
+
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> rm(list = ls())
+>
+> #
+> # -1. install libraries
+> #
+> # if (!require("BiocManager", quietly = TRUE))
+> #   install.packages("BiocManager")
+> #
+> # BiocManager::install("DESeq2")
+> # BiocManager::install("tximport")
+>
+> #
+> # 0. load libraries
+> #
+> library(DESeq2)
+Loading required package: S4Vectors
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename,
+    cbind, colnames, dirname, do.call, duplicated, eval,
+    evalq, Filter, Find, get, grep, grepl, intersect,
+    is.unsorted, lapply, Map, mapply, match, mget, order,
+    paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:utils’:
+
+    findMatches
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: GenomeInfoDb
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet,
+    colCollapse, colCounts, colCummaxs, colCummins,
+    colCumprods, colCumsums, colDiffs, colIQRDiffs, colIQRs,
+    colLogSumExps, colMadDiffs, colMads, colMaxs, colMeans2,
+    colMedians, colMins, colOrderStats, colProds,
+    colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars,
+    colWeightedMads, colWeightedMeans, colWeightedMedians,
+    colWeightedSds, colWeightedVars, rowAlls, rowAnyNAs,
+    rowAnys, rowAvgsPerColSet, rowCollapse, rowCounts,
+    rowCummaxs, rowCummins, rowCumprods, rowCumsums,
+    rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians,
+    rowMins, rowOrderStats, rowProds, rowQuantiles,
+    rowRanges, rowRanks, rowSdDiffs, rowSds, rowSums2,
+    rowTabulates, rowVarDiffs, rowVars, rowWeightedMads,
+    rowWeightedMeans, rowWeightedMedians, rowWeightedSds,
+    rowWeightedVars
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages
+    'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Warning messages:
+1: package ‘DESeq2’ was built under R version 4.3.3
+2: package ‘S4Vectors’ was built under R version 4.3.2
+3: package ‘SummarizedExperiment’ was built under R version 4.3.2
+> library(tximport)
+> library(biomaRt)
+Warning message:
+package ‘biomaRt’ was built under R version 4.3.2
+> library(BiocParallel)
+> library(crayon)
+> library(ggplot2)
+
+Attaching package: ‘ggplot2’
+
+The following object is masked from ‘package:crayon’:
+
+    %+%
+
+>
+> #
+> # 1. user-defined variables
+> #
+> setwd("~/scratch/")
+> kallisto_dir = "/Users/adrian/research/akureyri/results/kallisto.100"
+> results_dir = '/Users/adrian/research/akureyri/results/deseq2_pipeline'
+>
+> #
+> # 1. generate gene to transcript mapping
+> #
+>
+> mart = biomaRt::useMart(biomart="ENSEMBL_MART_ENSEMBL",
++                         dataset="hsapiens_gene_ensembl",
++                         host = 'https://www.ensembl.org',
++                         verbose = TRUE)
+BioMartServer running BioMart version: 0.7
+Mart virtual schema: default
+Mart host: https://www.ensembl.org:443/biomart/martservice
+Checking attributes ...Attempting web service request:
+https://www.ensembl.org:443/biomart/martservice?type=attributes&dataset=hsapiens_gene_ensembl&requestid=biomaRt&mart=ENSEMBL_MART_ENSEMBL&virtualSchema=default
+ ok
+Checking filters ...Attempting web service request:
+https://www.ensembl.org:443/biomart/martservice?type=filters&dataset=hsapiens_gene_ensembl&requestid=biomaRt&mart=ENSEMBL_MART_ENSEMBL&virtualSchema=default
+ ok
+> working_attributes = c('ensembl_transcript_id',
++                        'ensembl_gene_id',
++                        'external_gene_name',
++                        'gene_biotype',
++                        'description')
+> t2g = biomaRt::getBM(attributes=working_attributes,
++                      mart=mart,
++                      verbose=TRUE)
+Cache found
+> dim(t2g)
+[1] 277081      5
+> View(t2g)
+>
+> #
+> # 2. define metadata
+> #
+> dirnames = list.dirs(kallisto_dir, full.names=TRUE, recursive=FALSE)
+> paths = file.path(dirnames, 'abundance.h5')
+> labels = sapply(strsplit(paths, split='/',fixed=TRUE), function(x) (x[8]))
+> times = c('two', 'two', 'two', 'two', 'fourteen', 'fourteen',
++           'fourteen', 'fourteen', 'two', 'two', 'fourteen', 'fourteen')
+> sample = c('test01', 'test09', 'test02', 'test10', 'test03', 'test11',
++            'test04', 'test12', 'test05', 'test06', 'test07', 'test08')
+> cultures = c('2D', '2D', '3D', '3D', '2D', '2D',
++              '3D', '3D', '2D', '3D', '2D', '3D')
+>
+> metadata = data.frame(sample)
+> metadata$label = labels
+> metadata$time = times
+> metadata$culture = cultures
+> metadata$path = paths
+> metadata <- metadata[order(metadata$sample), ]
+> View(metadata)
+>
+> #
+> # 4. contrasts
+> #
+> threshold = 10
+>
+> #
+> # 4.1. contrast effect of time for 2D
+> #
+> rule = metadata$culture == '2D'
+> working_metadata = metadata[rule, ]
+> dim(working_metadata)
+[1] 6 5
+> View(working_metadata)
+>
+> txi = tximport(working_metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
+1 2 3 4 5 6
+transcripts missing from tx2gene: 610
+summarizing abundance
+summarizing counts
+summarizing length
+summarizing inferential replicates
+>
+> dds = DESeqDataSetFromTximport(txi, colData=working_metadata, design=~time)
+using counts and average transcript lengths from tximport
+Warning message:
+In DESeqDataSet(se, design = design, ignoreRank) :
+  some variables in design formula are characters, converting to factors
+> dds$time = relevel(dds$time, ref="two")
+>
+> keep = rowMaxs(counts(dds)) >= threshold
+> dds = dds[keep, ]
+>
+> dds = DESeq(dds, test="LRT", reduced=~1)
+estimating size factors
+using 'avgTxLength' from assays(dds), correcting for library size
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+>
+> res = results(dds, parallel=TRUE, alpha=0.05)
+> filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
+> cat(blue(paste('contrast effect of time for 2D:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
+contrast effect of time for 2D: 372
+> write.table(filtred_results,
++             file=paste(results_dir, '/effect_time_2D.tsv', sep=''), quote=FALSE, sep='\t')
+>
+> plotPCA(rlog(dds), intgroup=c('time')) + ggtitle('effect time for 2D')
+using ntop=500 top features by variance
+> ggsave(file.path(results_dir, 'effect_time_2D.png'))
+Saving 7.58 x 3.96 in image
+>
+> #
+> # 4.2. contrast effect of time for 3D
+> #
+> rule = metadata$culture == '3D'
+> working_metadata = metadata[rule, ]
+> dim(working_metadata)
+[1] 6 5
+> View(working_metadata)
+>
+> txi = tximport(working_metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
+1 2 3 4 5 6
+transcripts missing from tx2gene: 610
+summarizing abundance
+summarizing counts
+summarizing length
+summarizing inferential replicates
+>
+> dds = DESeqDataSetFromTximport(txi, colData=working_metadata, design=~time)
+using counts and average transcript lengths from tximport
+Warning message:
+In DESeqDataSet(se, design = design, ignoreRank) :
+  some variables in design formula are characters, converting to factors
+> dds$time = relevel(dds$time, ref="two")
+>
+> keep = rowMaxs(counts(dds)) >= threshold
+> dds = dds[keep, ]
+>
+> dds = DESeq(dds, test="LRT", reduced=~1)
+estimating size factors
+using 'avgTxLength' from assays(dds), correcting for library size
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+>
+> res = results(dds, parallel=TRUE, alpha=0.05)
+> filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
+> cat(blue(paste('contrast effect of time for 3D:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
+contrast effect of time for 3D: 1096
+> write.table(filtred_results,
++             file=paste(results_dir, '/effect_time_3D.tsv', sep=''), quote=FALSE, sep='\t')
+>
+> plotPCA(rlog(dds), intgroup=c('time')) + ggtitle('effect time for 3D')
+using ntop=500 top features by variance
+> ggsave(file.path(results_dir, 'effect_time_3D.png'))
+Saving 7.58 x 3.96 in image
+>
+> #
+> # 4.3. contrast effect of culture on Day 2
+> #
+> rule = metadata$time == 'two'
+> working_metadata = metadata[rule, ]
+> dim(working_metadata)
+[1] 6 5
+> View(working_metadata)
+>
+> txi = tximport(working_metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
+1 2 3 4 5 6
+transcripts missing from tx2gene: 610
+summarizing abundance
+summarizing counts
+summarizing length
+summarizing inferential replicates
+>
+> dds = DESeqDataSetFromTximport(txi, colData=working_metadata, design=~culture)
+using counts and average transcript lengths from tximport
+Warning message:
+In DESeqDataSet(se, design = design, ignoreRank) :
+  some variables in design formula are characters, converting to factors
+> dds$culture = relevel(dds$culture, ref="2D")
+>
+> keep = rowMaxs(counts(dds)) >= threshold
+> dds = dds[keep, ]
+>
+> dds = DESeq(dds, test="LRT", reduced=~1)
+estimating size factors
+using 'avgTxLength' from assays(dds), correcting for library size
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+>
+> res = results(dds, parallel=TRUE, alpha=0.05)
+> filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
+> cat(blue(paste('contrast effect of culture on Day 2:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
+contrast effect of culture on Day 2: 2160
+> write.table(filtred_results,
++             file=paste(results_dir, '/effect_culture_day2.tsv', sep=''), quote=FALSE, sep='\t')
+>
+> plotPCA(rlog(dds), intgroup=c('culture')) + ggtitle('effect culture on Day 2')
+using ntop=500 top features by variance
+> ggsave(file.path(results_dir, 'effect_culture_day2.png'))
+Saving 7.58 x 3.96 in image
+>
+> #
+> # 4.4. contrast effect of culture on Day 14
+> #
+> rule = metadata$time == 'fourteen'
+> working_metadata = metadata[rule, ]
+> dim(working_metadata)
+[1] 6 5
+> View(working_metadata)
+>
+> txi = tximport(working_metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
+1 2 3 4 5 6
+transcripts missing from tx2gene: 610
+summarizing abundance
+summarizing counts
+summarizing length
+summarizing inferential replicates
+>
+> dds = DESeqDataSetFromTximport(txi, colData=working_metadata, design=~culture)
+using counts and average transcript lengths from tximport
+Warning message:
+In DESeqDataSet(se, design = design, ignoreRank) :
+  some variables in design formula are characters, converting to factors
+> dds$culture = relevel(dds$culture, ref="2D")
+>
+> keep = rowMaxs(counts(dds)) >= threshold
+> dds = dds[keep, ]
+>
+> dds = DESeq(dds, test="LRT", reduced=~1)
+estimating size factors
+using 'avgTxLength' from assays(dds), correcting for library size
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+>
+> res = results(dds, parallel=TRUE, alpha=0.05)
+> filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
+> cat(blue(paste('contrast effect of culture on Day 14:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
+contrast effect of culture on Day 14: 1014
+> write.table(filtred_results,
++             file=paste(results_dir, '/effect_culture_day14.tsv', sep=''), quote=FALSE, sep='\t')
+>
+> plotPCA(rlog(dds), intgroup=c('culture')) + ggtitle('effect culture Day 14')
+using ntop=500 top features by variance
+> ggsave(file.path(results_dir, 'effect_culture_day14.png'))
+Saving 7.58 x 3.96 in image
+>
+> #
+> # 4.5. interaction
+> #
+> working_metadata = metadata
+> dim(working_metadata)
+[1] 12  5
+> View(working_metadata)
+>
+> txi = tximport(working_metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
+1 2 3 4 5 6 7 8 9 10 11 12
+transcripts missing from tx2gene: 610
+summarizing abundance
+summarizing counts
+summarizing length
+summarizing inferential replicates
+>
+> dds = DESeqDataSetFromTximport(txi, colData=working_metadata, design=~time+culture+time:culture)
+using counts and average transcript lengths from tximport
+Warning message:
+In DESeqDataSet(se, design = design, ignoreRank) :
+  some variables in design formula are characters, converting to factors
+>
+> keep = rowMaxs(counts(dds)) >= threshold
+> dds = dds[keep, ]
+>
+> dds = DESeq(dds, test="LRT", reduced=~time+culture)
+estimating size factors
+using 'avgTxLength' from assays(dds), correcting for library size
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+>
+> res = results(dds, parallel=TRUE, alpha=0.05)
+> filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
+> cat(blue(paste('interaction:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
+interaction: 1789
+> write.table(filtred_results,
++             file=paste(results_dir, '/interaction.tsv', sep=''), quote=FALSE, sep='\t')
+>
+> #
+> # 4.6. plot everything
+> #
+> working_metadata = metadata
+> dim(working_metadata)
+[1] 12  5
+> View(working_metadata)
+>
+> txi = tximport(working_metadata$path, type="kallisto", tx2gene=t2g, ignoreTxVersion=TRUE)
+1 2 3 4 5 6 7 8 9 10 11 12
+transcripts missing from tx2gene: 610
+summarizing abundance
+summarizing counts
+summarizing length
+summarizing inferential replicates
+>
+> dds = DESeqDataSetFromTximport(txi, colData=working_metadata, design=~time+culture+time:culture)
+using counts and average transcript lengths from tximport
+Warning message:
+In DESeqDataSet(se, design = design, ignoreRank) :
+  some variables in design formula are characters, converting to factors
+>
+> keep = rowMaxs(counts(dds)) >= threshold
+> dds = dds[keep, ]
+>
+> plotPCA(rlog(dds), ntop=500, intgroup=c('time', 'culture')) + ggtitle('all')
+using 'avgTxLength' from assays(dds), correcting for library size
+using ntop=500 top features by variance
+> ggsave(file.path(results_dir, 'all.png'))
+Saving 7.58 x 3.96 in image
+>
