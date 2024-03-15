@@ -94,7 +94,7 @@ dds = DESeq(dds, test="LRT", reduced=~1)
 
 res = results(dds, parallel=TRUE, alpha=0.05) 
 filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
-anti_results = res[which(res$padj > 0.05 & abs(res$log2FoldChange) < 1), ]
+anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < 1), ]
 cat(blue(paste('contrast effect of time for 2D:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
 write.table(filtred_results, 
             file=paste(results_dir, '/effect_time_2D.tsv', sep=''), quote=FALSE, sep='\t')
@@ -125,7 +125,7 @@ dds = DESeq(dds, test="LRT", reduced=~1)
 
 res = results(dds, parallel=TRUE, alpha=0.05) 
 filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
-anti_results = res[which(res$padj > 0.05 & abs(res$log2FoldChange) < 1), ]
+anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < 1), ]
 cat(blue(paste('contrast effect of time for 3D:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
 write.table(filtred_results, 
             file=paste(results_dir, '/effect_time_3D.tsv', sep=''), quote=FALSE, sep='\t')
@@ -155,7 +155,7 @@ dds = DESeq(dds, test="LRT", reduced=~1)
 
 res = results(dds, parallel=TRUE, alpha=0.05) 
 filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
-anti_results = res[which(res$padj > 0.05 & abs(res$log2FoldChange) < 1), ]
+anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < 1), ]
 cat(blue(paste('contrast effect of culture on Day 2:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
 write.table(filtred_results, 
             file=paste(results_dir, '/effect_culture_day2.tsv', sep=''), quote=FALSE, sep='\t')
@@ -185,7 +185,7 @@ dds = DESeq(dds, test="LRT", reduced=~1)
 
 res = results(dds, parallel=TRUE, alpha=0.05) 
 filtred_results = res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
-anti_results = res[which(res$padj > 0.05 & abs(res$log2FoldChange) < 1), ]
+anti_results = res[which(res$padj > 0.05 | abs(res$log2FoldChange) < 1), ]
 cat(blue(paste('contrast effect of culture on Day 14:', dim(filtred_results)[1], sep=' ')), fill=TRUE)
 write.table(filtred_results, 
             file=paste(results_dir, '/effect_culture_day14.tsv', sep=''), quote=FALSE, sep='\t')
