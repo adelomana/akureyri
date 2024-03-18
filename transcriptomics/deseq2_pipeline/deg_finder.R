@@ -231,5 +231,17 @@ dds = DESeqDataSetFromTximport(txi, colData=working_metadata, design=~time+cultu
 keep = rowMaxs(counts(dds)) >= threshold
 dds = dds[keep, ]
 
+plotPCA(rlog(dds), ntop=100, intgroup=c('time', 'culture')) + ggtitle('all')
+ggsave(file.path(results_dir, 'all.100.png'))
+
+plotPCA(rlog(dds), ntop=250, intgroup=c('time', 'culture')) + ggtitle('all')
+ggsave(file.path(results_dir, 'all.250.png'))
+
 plotPCA(rlog(dds), ntop=500, intgroup=c('time', 'culture')) + ggtitle('all')
-ggsave(file.path(results_dir, 'all.png'))
+ggsave(file.path(results_dir, 'all.500.png'))
+
+plotPCA(rlog(dds), ntop=1000, intgroup=c('time', 'culture')) + ggtitle('all')
+ggsave(file.path(results_dir, 'all.1000.png'))
+
+plotPCA(rlog(dds), ntop=2000, intgroup=c('time', 'culture')) + ggtitle('all')
+ggsave(file.path(results_dir, 'all.2000.png'))

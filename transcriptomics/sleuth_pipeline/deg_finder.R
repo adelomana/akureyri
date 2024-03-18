@@ -50,7 +50,7 @@ metadata <- metadata[order(metadata$sample), ]
 # 3. contrasts
 #
 
-# using LRT instead of Wald because Wald gives three times more.
+# using LRT instead of Wald because Wald gives three times more and authors mentioned that it gives lots of false positives
 # Using pval_aggregate = TRUE bc otherwise no DEGs. Get FC from est counts file
 
 #
@@ -74,12 +74,17 @@ sleuth_table = sleuth_results(so,
                                'lrt',
                                show_all = FALSE,
                                pval_aggregate = TRUE)
-sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
+sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
+anti = dplyr::filter(sleuth_table, qval > 0.05)
 dim(sleuth_significant)
 plot_pca(so, color_by = 'time') + ggtitle('effect time for 2D')
 ggsave(file.path(results_dir, 'effect_time_2D.png'))
 write.table(sleuth_significant, 
-            file = paste(results_dir, '/effect_time_for_2D.tsv', sep=''), 
+            file = paste(results_dir, '/effect_time_2D.tsv', sep=''), 
+            sep = '\t',
+            quote = FALSE)
+write.table(anti, 
+            file = paste(results_dir, '/effect_time_2D.anti.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)
 
@@ -104,12 +109,17 @@ sleuth_table = sleuth_results(so,
                               'lrt',
                               show_all = FALSE,
                               pval_aggregate = TRUE)
-sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
+sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
+anti = dplyr::filter(sleuth_table, qval > 0.05)
 dim(sleuth_significant)
 plot_pca(so, color_by = 'time') + ggtitle('effect time for 3D')
 ggsave(file.path(results_dir, 'effect_time_3D.png'))
 write.table(sleuth_significant, 
             file = paste(results_dir, '/effect_time_for_3D.tsv', sep=''), 
+            sep = '\t',
+            quote = FALSE)
+write.table(anti, 
+            file = paste(results_dir, '/effect_time_3D.anti.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)
 
@@ -134,12 +144,17 @@ sleuth_table = sleuth_results(so,
                               'lrt',
                               show_all = FALSE,
                               pval_aggregate = TRUE)
-sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
+sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
+anti = dplyr::filter(sleuth_table, qval > 0.05)
 dim(sleuth_significant)
 plot_pca(so, color_by = 'culture') + ggtitle('effect culture at 2 days')
 ggsave(file.path(results_dir, 'effect_culture_2days.png'))
 write.table(sleuth_significant, 
-            file = paste(results_dir, '/effect_culture_at_2days.tsv', sep=''), 
+            file = paste(results_dir, '/effect_culture_day2.tsv', sep=''), 
+            sep = '\t',
+            quote = FALSE)
+write.table(anti, 
+            file = paste(results_dir, '/effect_culture_day2.anti.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)
 
@@ -164,12 +179,17 @@ sleuth_table = sleuth_results(so,
                               'lrt',
                               show_all = FALSE,
                               pval_aggregate = TRUE)
-sleuth_significant = dplyr::filter(sleuth_table, qval <= 0.05)
+sleuth_significant = dplyr::filter(sleuth_table, qval < 0.05)
+anti = dplyr::filter(sleuth_table, qval > 0.05)
 dim(sleuth_significant)
 plot_pca(so, color_by = 'culture') + ggtitle('effect culture at 14 days')
-ggsave(file.path(results_dir, 'effect_culture_14days.png'))
+ggsave(file.path(results_dir, 'effect_culture_day14.png'))
 write.table(sleuth_significant, 
-            file = paste(results_dir, '/effect_culture_at_14days.tsv', sep=''), 
+            file = paste(results_dir, '/effect_culture_day14.tsv', sep=''), 
+            sep = '\t',
+            quote = FALSE)
+write.table(anti, 
+            file = paste(results_dir, '/effect_culture_day14.anti.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)
 
