@@ -115,7 +115,7 @@ dim(sleuth_significant)
 plot_pca(so, color_by = 'time') + ggtitle('effect time for 3D')
 ggsave(file.path(results_dir, 'effect_time_3D.png'))
 write.table(sleuth_significant, 
-            file = paste(results_dir, '/effect_time_for_3D.tsv', sep=''), 
+            file = paste(results_dir, '/effect_time_3D.tsv', sep=''), 
             sep = '\t',
             quote = FALSE)
 write.table(anti, 
