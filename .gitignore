@@ -11,3 +11,5 @@ transcriptomics/deseq2_pipeline/.virtual_documents/pattern_finder.ipynb
 /transcriptomics/sleuth_pipeline/.ipynb_checkpoints
 /transcriptomics/sleuth_pipeline/.virtual_documents
 transcriptomics/sleuth_pipeline/Venn_4.png
+*.svg
+transcriptomics/sleuth_pipeline/Intersections_4.txt
