@@ -13,3 +13,6 @@ transcriptomics/deseq2_pipeline/.virtual_documents/pattern_finder.ipynb
 transcriptomics/sleuth_pipeline/Venn_4.png
 *.svg
 transcriptomics/sleuth_pipeline/Intersections_4.txt
+/transcriptomics/distance2health/.ipynb_checkpoints
+transcriptomics/distance2health/.Rhistory
+/transcriptomics/distance2health/.virtual_documents
