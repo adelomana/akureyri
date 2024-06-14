@@ -1,3 +1,6 @@
+
+# the objective of this script is to convert raw counts into TPM and ensembl ids.
+
 # https://divingintogeneticsandgenomics.com/post/how-to-convert-raw-counts-to-tpm-for-tcga-data-and-make-a-heatmap-across-cancer-types/
 
 # https://search.r-project.org/CRAN/refmans/DGEobj.utils/html/convertCounts.html
@@ -16,7 +19,7 @@ library(DGEobj.utils)
 #
 # 2. user-defined variables
 #
-counts_file = '/Users/adrian/research/akureyri/data/GSE114007_normal_normalized.counts.txt'
+counts_file = '/Users/adrian/research/akureyri/data/transcriptomics/GSE114007_raw_counts_normal.tsv'
 annotation_file = '/Users/adrian/research/akureyri/results/deseq2_pipeline/annotation.tsv'
 
 #
@@ -24,40 +27,48 @@ annotation_file = '/Users/adrian/research/akureyri/results/deseq2_pipeline/annot
 # 
 
 # 3.1. counts data
-df = read.table(counts_file, sep='\t', header=TRUE, row.names=1)
-dim(df)
-drop <- c("Average.Normal","Max")
-df = df[, !(names(df) %in% drop)]
-dim(df)
-
-epsilon = 2**-4.647587
-y = (2**df) - epsilon
-counts = round(y, digits=0)
+counts = read.table(counts_file, sep='\t', header=TRUE, row.names=1)
+dim(counts)
+View(counts)
 
 # 3.2. read gene length
-ann = read.table(annotation_file, 
+anno = read.table(annotation_file, 
                   sep='\t', 
                   header=TRUE, 
                   row.names=1,
                   quote="") # R surprises
-print(dim(ann))
+dim(anno)
+View(anno)
 
 # 
 # 4. analysis
 #
 gene_lengths = c()
 found_symbols = c()
+lost_symbols = c()
 symbols = rownames(counts)
 
-for (symbol in symbols[1:10]){
-  gene_length = ann[ann$external_gene_name == symbol, ]$geneLength[1]
+for (symbol in symbols[1:100]){
+  gene_length = anno[anno$external_gene_name == symbol, ]$geneLength[1]
   print(c(symbol, gene_length))
   
-  gene_lengths = c(gene_lengths, gene_length)
-  found_symbols = c(found_symbols, symbol)
+  if (is.na(gene_length)) {
+    lost_symbols = c(lost_symbols, symbol)
+  } else {
+    gene_lengths = c(gene_lengths, gene_length)
+    found_symbols = c(found_symbols, symbol)
+    }
+  
+  #·gene_lengths = c(gene_lengths, gene_length)
+  #f
 } 
-gene_lengths
 
-convertCounts(counts, unit='TPM')
+length(symbols)
+length(found_symbols)
+length(gene_lengths)
+length(lost_symbols)
+
+
+#convertCounts(counts, unit='TPM', geneLength=gene_lengths)
 
 

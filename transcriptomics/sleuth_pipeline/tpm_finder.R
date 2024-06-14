@@ -84,11 +84,18 @@ toc()
 # theads option does not impact elapsed time
 
 #
-# 4. store estimated counts per gene. Sleuth recomends "scaled_reads_per_base"
+# 4. store estimated counts per gene. Sleuth recommends "scaled_reads_per_base"
 #
 cat(blue('storing'), fill=TRUE)
+
 tpm_table = sleuth_to_matrix(so, 'obs_norm', 'scaled_reads_per_base')
 write.table(tpm_table, 
           file.path(results_dir, 'sleuth_scaled_reads_bygene.csv'),
           quote = FALSE,
           sep = '\t')
+
+tpm_table = sleuth_to_matrix(so, 'obs_norm', 'tpm')
+write.table(tpm_table, 
+            file.path(results_dir, 'sleuth_tpm_bygene.csv'),
+            quote = FALSE,
+            sep = '\t')
