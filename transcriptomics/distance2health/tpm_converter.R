@@ -48,19 +48,15 @@ found_symbols = c()
 lost_symbols = c()
 symbols = rownames(counts)
 
-for (symbol in symbols[1:100]){
+for (symbol in symbols){
   gene_length = anno[anno$external_gene_name == symbol, ]$geneLength[1]
-  print(c(symbol, gene_length))
-  
+
   if (is.na(gene_length)) {
     lost_symbols = c(lost_symbols, symbol)
   } else {
     gene_lengths = c(gene_lengths, gene_length)
     found_symbols = c(found_symbols, symbol)
     }
-  
-  #·gene_lengths = c(gene_lengths, gene_length)
-  #f
 } 
 
 length(symbols)
@@ -68,7 +64,13 @@ length(found_symbols)
 length(gene_lengths)
 length(lost_symbols)
 
+annotated_counts = counts[found_symbols, ]
+annotated_counts_matrix = as.matrix(annotated_counts)
+View(annotated_counts_matrix)
 
-#convertCounts(counts, unit='TPM', geneLength=gene_lengths)
+tpm = convertCounts(annotated_counts_matrix, unit='TPM', geneLength=gene_lengths)
+
+write.table(tpm, 'converted_tpm.tsv', sep='\t', quote=FALSE)
+
 
 
