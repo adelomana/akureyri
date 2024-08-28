@@ -90,12 +90,12 @@ cat(blue('storing'), fill=TRUE)
 
 tpm_table = sleuth_to_matrix(so, 'obs_norm', 'scaled_reads_per_base')
 write.table(tpm_table, 
-          file.path(results_dir, 'sleuth_scaled_reads_bygene.csv'),
+          file.path(results_dir, 'sleuth_scaled_reads_bygene.tsv'),
           quote = FALSE,
           sep = '\t')
 
 tpm_table = sleuth_to_matrix(so, 'obs_norm', 'tpm')
 write.table(tpm_table, 
-            file.path(results_dir, 'sleuth_tpm_bygene.csv'),
+            file.path(results_dir, 'sleuth_tpm_bygene.tsv'),
             quote = FALSE,
             sep = '\t')
